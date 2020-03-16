@@ -21,16 +21,16 @@ The collatz conjecture has been called the problem that both mathematics and com
 
 ![SeqLenVsN](SequenceLengthVsNum.PNG)
 - I then began to wonder what these sequence lengths looked like for one of my favorite groups of numbers: the fibonacci sequence. 
-- Using *Binet's* formula (listed below) for the nth fibonacci number, I then calculated the sequence length of the first thousand fibonacci numbers. The resulting graph yielded an interesting bifurcation.
+- Using *Binet's* formula (listed below) for the nth fibonacci number, I then calculated the sequence length of the first thousand fibonacci numbers. The resulting graph yielded an interesting spike.
 <!--F_n = \frac{\varphi^n - (-\varphi)^{-n}}{\sqrt{5}}, \varphi=\frac{1 + \sqrt{5}}{2} -->
 - Binet's Formula: this is one of my favorite equations as it expresses the nth term of a normally recursively defined function in a closed form solution, and the *Golden Ratio* appears. ALong with proper rounding Binet's formula is perfect solution to calculating fibonacci numbers non recursively up to a certain size (precision and overflow can become issues when n is very large
 
 ![binet](Binet.PNG)
 - This graph depicts the length of the collatz sequence for the first 1k fibonacci numbers. X: the x'th Fibonacci Number; Y: Collatz Path Length of the x'th fibonacci number
 
-![Fibo](PathLengthNthFibbonacciNumber.PNG)
-
-- As of yet the reason for the bifurcation is not entirely clear to me beyond the fact that the exponential scale of the fibonacci numbers may skew and make more pronounced a natural bifurcation already present in the graph of Collatz Sequence Length of n vs n; 
+![Fibo](PathLengthNthFibonacciNumber.PNG)
+ 
+ - Note this author also notes that the graph of PathLength(n)/n also produces a very interesting bifurcation but as of yet I cannot explain why.
 
 - Additionally one of the other experiments I ran was to determine the branching factor of the collatz tree. Whereas before I worked with the length of the collatz sequence; Here I worked with the specific values in that sequence; i.e it can be shown that any value that can be expressed as 2^k where k is a whole number; the sequence associated with that number will always return to the trivial loop. 
 - So for example: 10->5->16->8->4->2->1->4 ... etc ...  Now consider the sequence 32->16->8->4->2->1->4 ... etc ... Notice how both the values 32 and 5 enter node 16; My goal was to build the parital tree for the numbers up to a certian value. 
